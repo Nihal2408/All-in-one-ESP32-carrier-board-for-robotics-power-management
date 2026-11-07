@@ -1,4 +1,5 @@
-# ESP32 Robotics Carrier Board
+<img width="750" height="644" alt="Screenshot 2026-11-07 at 10 35 29 AM" src="https://github.com/user-attachments/assets/0e66b8b9-5c54-4a6e-8d0a-a34a2a4b3cb4" />
+<img width="1680" height="1050" alt="Screenshot 2026-11-07 at 10 35 01 AM" src="https://github.com/user-attachments/assets/2f9268bc-f8ca-42f1-a61f-4f49a1eb08f3" /># ESP32 Robotics Carrier Board
 
 An all-in-one, production-grade robotics controller and carrier board designed in **EasyEDA**. Built around the **ESP32-WROOM-32E** microcontroller, this board integrates an onboard automatic SEPIC buck-boost converter, linear logic power rails, an L293DD dual H-Bridge DC motor driver, and dedicated breakout interfaces for servos, sensors, displays, and analog telemetry.
 
