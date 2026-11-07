@@ -105,6 +105,58 @@ An all-in-one, production-grade robotics controller and carrier board designed i
 
 ---
 
+
+
+## 📦 Bill of Materials (BOM)
+
+### Visual BOM Reference
+![Bill of Materials Preview](docs/images/bom_corrected_table.png)
+
+### Complete Parts List
+
+| Designator | Component / Value | Footprint | Qty | Manufacturer Part # | LCSC Part # | Notes |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- |
+| **U2** | ESP32-WROOM-32E (4MB) | `WIFI-SMD_ESP32-WROOM-32E` | 1 | `ESP32-WROOM-32E-N4` | `C701341` | Core SoC |
+| **U4** | CP2102N-A01-GQFN28 | `QFN-28_L5.0-W5.0-P0.50-BL-EP3.3` | 1 | `CP2102N-A01-GQFN28R` | `C105167` | USB UART Bridge |
+| **U3, U5** | L293DD | `SOIC-20_L12.8-W7.5-P1.27-LS10.3-TL` | 2 | `L293DD` | `C9900019186` | Motor Drivers |
+| **U8** | XL6019E1 | `TO-263-5_L10.2-W9.9-P1.70-LS14.4-TL` | 1 | `XL6019E1` | `C73018` | SEPIC Controller |
+| **U1** | AMS1117-3.3 | `SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR` | 1 | `AMS1117-3.3` | `C6186` | 3.3V Logic LDO |
+| **U6, U7** | AMS1117-5.0RG | `SOT-223-3_L6.4-W3.5-P2.30-LS7.0-BR` | 2 | `AMS1117-5.0RG` | `C2977151` | 5.0V Peripheral LDO |
+| **L2, L3** | 33uH Inductor | `IND-SMD_L12.0-W12.0_CDRH127NP` | 2 | `CDRH127NP-330MC` | `C167264` | Power Inductors |
+| **D5** | SS54 Schottky Diode | `SMA_L4.4-W2.8-LS5.4-R-RD` | 1 | `SS54` | `C22452` | Power Rectifier |
+| **D1** | BAT760-7 Schottky | `SOD-323_L1.7-W1.3-LS2.6-FD-1` | 1 | `BAT760-7` | `C27636120` | Reverse Protection |
+| **D2, D3, D4** | LESD5D5.0CT1G | `SOD-523_L1.2-W0.8-LS1.6-BI` | 3 | `LESD5D5.0CT1G` | `C383211` | ESD Protection |
+| **Q1, Q2** | S8050 NPN Transistor | `SOT-23-3_L3.0-W1.7-P0.95-LS2.9-BR` | 2 | `S8050 J3Y` | `C2146` | Auto-Program |
+| **LED1** | KT-0603R Red LED | `LED-SMD_L1.6-W0.8-R-RD` | 1 | `KT-0603R` | `C2286` | Power Indicator |
+| **C10** | 100uF Electrolytic | `CAP-SMD_BD6.3-L6.6-W6.6-FD` | 1 | `RVT1V101M0607` | `C18221518` | Bulk Cap |
+| **C12, C13** | 220uF Electrolytic | `CAP-SMD_BD6.3-L6.6-W6.6-LS7.4-FD` | 2 | `RVT1E221M0607` | `C2918361` | SEPIC Input/Output |
+| **C11** | 10uF Ceramic | `C1206` | 1 | `CL31A106KBHNNNE` | `C13585` | SEPIC Coupling |
+| **C1, C3, C5** | 22uF Ceramic | `C0805` | 3 | `CL21A226MAQNNNE` | `C45783` | Decoupling |
+| **C6** | 4.7uF Ceramic | `C0603` | 1 | `CL10A475KO8NNNC` | `C19666` | Decoupling |
+| **C7, C8, C9** | 100nF Ceramic | `C0805` | 3 | `CC0805KRX7R9BB104` | `C49678` | Filter Cap |
+| **C2, C4** | 100nF Ceramic | `C0603` | 2 | `CC0603KRX7R9BB104` | `C14663` | Filter Cap |
+| **R1** | 10kΩ | `R0603` | 1 | `0603WAF1002T5E` | `C25804` | EN Pull-up |
+| **R2** | 2kΩ | `R0603` | 1 | `0603WAF2001T5E` | `C22975` | LED Limiter |
+| **R10** | 2kΩ | `R0805` | 1 | `0805W8F2001T5E` | `C17604` | Logic Divider |
+| **R11** | 2kΩ | `R0603` | 1 | `0603WAF2001T5E` | `C22975` | FB Lower Resistor |
+| **R13** | 18kΩ | `R0603` | 1 | `0603WAF1802T5E` | `C25810` | Divider Resistor |
+| **R3, R4** | 0Ω | `R0805` | 2 | `0805W8F0000T5E` | `C17477` | Jumper Resistors |
+| **R5, R6, R9** | 10kΩ | `R0805` | 3 | `0805W8F1002T5E` | `C17414` | Pull-ups |
+| **R7** | 20.5kΩ | `R0805` | 1 | `0805W8F2052T5E` | `C17537` | Divider Resistor |
+| **R8** | 47kΩ | `R0805` | 1 | `0805W8F4702T5E` | `C17713` | Divider Resistor |
+| **USB1** | Micro-USB Connector | `MICRO-USB-SMD_U254-051T-4BH83-S1S` | 1 | `U254-051T-4BH83-S1S` | `C319160` | Programming Port |
+| **SW1, SW2** | SMD Tact Switch | `SW-SMD_HX-3X6X2.5-X` | 2 | `HX-3x6x2.5-X SMD tact Switch` | `C49234125` | Reset / Boot |
+| **MOTOR_A, MOTOR_B, BATTERY_INPUT** | HDR-F-2.54 1x2 | `HDR-F-2.54_1X2` | 3 | - | `C49661` | Power & Motors |
+| **SENSOR, H10, SERVO_A, SERVO_B** | HDR-F-2.54 1x3 | `HDR-F-2.54_1X3` | 4 | - | `C146690` | Sensors & Servos |
+| **H13, DISPLAY&I2C, ULTRA, H15** | HDR-F-2.54 1x4 | `HDR-F-2.54_1X4` | 4 | - | `C225501` | Displays & Sonar |
+| **H7, POWER, GPIO** | HDR-F-2.54 1x5 | `HDR-F-2.54_1X5` | 3 | - | `C50950` | Power & Expansion |
+
+---
+
+
+
+
+
 ## 📋 Manufacturing & Assembly Checklist
 
 When ordering boards from **JLCPCB** or similar fabrication houses:
