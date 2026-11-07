@@ -107,52 +107,50 @@ An all-in-one, production-grade robotics controller and carrier board designed i
 
 
 
-## 📦 Bill of Materials (BOM)
+
+## 🛒 Bill of Materials & Component Sourcing
+
+### Parts & Material Buying Table
+
+| Part / Material | Designator | Qty | Unit Price (USD) | Buying Link |
+| :--- | :--- | :---: | :---: | :--- |
+| **ESP32-WROOM-32E (4MB)** | `U2` | 1 | $2.35 | [LCSC C701341](https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-WROOM-32E-N4_C701341.html) |
+| **CP2102N-A01-GQFN28** USB Bridge | `U4` | 1 | $1.98 | [LCSC C105167](https://www.lcsc.com/product-detail/USB-ICs_Silicon-Labs-CP2102N-A01-GQFN28R_C105167.html) |
+| **XL6019E1** 5A SEPIC Controller | `U8` | 1 | $0.58 | [LCSC C73018](https://www.lcsc.com/product-detail/DC-DC-Converters_XLSEMI-XL6019E1_C73018.html) |
+| **L293DD** Dual Motor Driver | `U3, U5` | 2 | $0.94 | [LCSC C9900019186](https://www.lcsc.com/search?q=C9900019186) |
+| **AMS1117-3.3** Linear Regulator | `U1` | 1 | $0.12 | [LCSC C6186](https://www.lcsc.com/product-detail/Linear-Voltage-Regulators-LDO_AMS1117-3-3_C6186.html) |
+| **AMS1117-5.0RG** Linear Regulator | `U6, U7` | 2 | $0.11 | [LCSC C2977151](https://www.lcsc.com/product-detail/Linear-Voltage-Regulators-LDO_AMS1117-5-0RG_C2977151.html) |
+| **33uH** Shielded Power Inductor | `L2, L3` | 2 | $0.32 | [LCSC C167264](https://www.lcsc.com/product-detail/Inductors-SMD_Sumida-CDRH127NP-330MC_C167264.html) |
+| **SS54** 5A 40V Schottky Diode | `D5` | 1 | $0.08 | [LCSC C22452](https://www.lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_SS54_C22452.html) |
+| **BAT760-7** 30V 1A Schottky Diode | `D1` | 1 | $0.15 | [LCSC C27636120](https://www.lcsc.com/search?q=C27636120) |
+| **LESD5D5.0CT1G** ESD Protection | `D2, D3, D4` | 3 | $0.04 | [LCSC C383211](https://www.lcsc.com/product-detail/ESD-and-Surge-Protection-TVS_LESD5D5-0CT1G_C383211.html) |
+| **S8050** NPN Transistor (SOT-23) | `Q1, Q2` | 2 | $0.02 | [LCSC C2146](https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_Jiangsu-Changjing-Electronics-Technology-Co-Ltd-S8050_C2146.html) |
+| **KT-0603R** Red SMD LED | `LED1` | 1 | $0.01 | [LCSC C2286](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Hubei-Kento-Elec-KT-0603R_C2286.html) |
+| **100uF** SMD Electrolytic (35V) | `C10` | 1 | $0.14 | [LCSC C18221518](https://www.lcsc.com/search?q=C18221518) |
+| **220uF** SMD Electrolytic (25V/35V) | `C12, C13` | 2 | $0.18 | [LCSC C2918361](https://www.lcsc.com/search?q=C2918361) |
+| **10uF** MLCC Ceramic (1206, 50V) | `C11` | 1 | $0.09 | [LCSC C13585](https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL31A106KBHNNNE_C13585.html) |
+| **22uF** MLCC Ceramic (0805) | `C1, C3, C5` | 3 | $0.05 | [LCSC C45783](https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL21A226MAQNNNE_C45783.html) |
+| **4.7uF** MLCC Ceramic (0603) | `C6` | 1 | $0.03 | [LCSC C19666](https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A475KO8NNNC_C19666.html) |
+| **100nF** MLCC Ceramic (0805) | `C7, C8, C9` | 3 | $0.01 | [LCSC C49678](https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0805KRX7R9BB104_C49678.html) |
+| **100nF** MLCC Ceramic (0603) | `C2, C4` | 2 | $0.01 | [LCSC C14663](https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB104_C14663.html) |
+| **10kΩ** SMD Resistor (0603) | `R1` | 1 | $0.01 | [LCSC C25804](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.html) |
+| **2kΩ** SMD Resistor (0603) | `R2, R11` | 2 | $0.01 | [LCSC C22975](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF2001T5E_C22975.html) |
+| **2kΩ** SMD Resistor (0805) | `R10` | 1 | $0.01 | [LCSC C17604](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F2001T5E_C17604.html) |
+| **18kΩ** SMD Resistor (0603) | `R13` | 1 | $0.01 | [LCSC C25810](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF1802T5E_C25810.html) |
+| **0Ω** Jumper Resistor (0805) | `R3, R4` | 2 | $0.01 | [LCSC C17477](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F0000T5E_C17477.html) |
+| **10kΩ** SMD Resistor (0805) | `R5, R6, R9` | 3 | $0.01 | [LCSC C17414](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F1002T5E_C17414.html) |
+| **20.5kΩ** SMD Resistor (0805) | `R7` | 1 | $0.01 | [LCSC C17537](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F2052T5E_C17537.html) |
+| **47kΩ** SMD Resistor (0805) | `R8` | 1 | $0.01 | [LCSC C17713](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F4702T5E_C17713.html) |
+| **Micro-USB Female Receptacle** | `USB1` | 1 | $0.16 | [LCSC C319160](https://www.lcsc.com/product-detail/USB-Connectors_Korean-HRO-Elec-U254-051T-4BH83-S1S_C319160.html) |
+| **3x6x2.5mm SMD Tact Switch** | `SW1, SW2` | 2 | $0.04 | [LCSC C49234125](https://www.lcsc.com/search?q=C49234125) |
+| **2-Pin 2.54mm Female Header** | `MOTOR_A, MOTOR_B, BATTERY_INPUT` | 3 | $0.04 | [LCSC C49661](https://www.lcsc.com/product-detail/Female-Headers_BOOMELE-Boom-Precision-Elec-2-54-1-2P_C49661.html) |
+| **3-Pin 2.54mm Female Header** | `SENSOR, H10, SERVO_A, SERVO_B` | 4 | $0.05 | [LCSC C146690](https://www.lcsc.com/search?q=C146690) |
+| **4-Pin 2.54mm Female Header** | `H13, DISPLAY&I2C, ULTRA, H15` | 4 | $0.06 | [LCSC C225501](https://www.lcsc.com/search?q=C225501) |
+| **5-Pin 2.54mm Female Header** | `H7, POWER, GPIO` | 3 | $0.07 | [LCSC C50950](https://www.lcsc.com/product-detail/Female-Headers_BOOMELE-Boom-Precision-Elec-2-54-1-5P_C50950.html) |
 
 ### Visual BOM Reference
-![Bill of Materials Preview](docs/images/bom_corrected_table.png)
 
-### Complete Parts List
-
-| Designator | Component / Value | Footprint | Qty | Manufacturer Part # | LCSC Part # | Notes |
-| :--- | :--- | :--- | :---: | :--- | :--- | :--- |
-| **U2** | ESP32-WROOM-32E (4MB) | `WIFI-SMD_ESP32-WROOM-32E` | 1 | `ESP32-WROOM-32E-N4` | `C701341` | Core SoC |
-| **U4** | CP2102N-A01-GQFN28 | `QFN-28_L5.0-W5.0-P0.50-BL-EP3.3` | 1 | `CP2102N-A01-GQFN28R` | `C105167` | USB UART Bridge |
-| **U3, U5** | L293DD | `SOIC-20_L12.8-W7.5-P1.27-LS10.3-TL` | 2 | `L293DD` | `C9900019186` | Motor Drivers |
-| **U8** | XL6019E1 | `TO-263-5_L10.2-W9.9-P1.70-LS14.4-TL` | 1 | `XL6019E1` | `C73018` | SEPIC Controller |
-| **U1** | AMS1117-3.3 | `SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR` | 1 | `AMS1117-3.3` | `C6186` | 3.3V Logic LDO |
-| **U6, U7** | AMS1117-5.0RG | `SOT-223-3_L6.4-W3.5-P2.30-LS7.0-BR` | 2 | `AMS1117-5.0RG` | `C2977151` | 5.0V Peripheral LDO |
-| **L2, L3** | 33uH Inductor | `IND-SMD_L12.0-W12.0_CDRH127NP` | 2 | `CDRH127NP-330MC` | `C167264` | Power Inductors |
-| **D5** | SS54 Schottky Diode | `SMA_L4.4-W2.8-LS5.4-R-RD` | 1 | `SS54` | `C22452` | Power Rectifier |
-| **D1** | BAT760-7 Schottky | `SOD-323_L1.7-W1.3-LS2.6-FD-1` | 1 | `BAT760-7` | `C27636120` | Reverse Protection |
-| **D2, D3, D4** | LESD5D5.0CT1G | `SOD-523_L1.2-W0.8-LS1.6-BI` | 3 | `LESD5D5.0CT1G` | `C383211` | ESD Protection |
-| **Q1, Q2** | S8050 NPN Transistor | `SOT-23-3_L3.0-W1.7-P0.95-LS2.9-BR` | 2 | `S8050 J3Y` | `C2146` | Auto-Program |
-| **LED1** | KT-0603R Red LED | `LED-SMD_L1.6-W0.8-R-RD` | 1 | `KT-0603R` | `C2286` | Power Indicator |
-| **C10** | 100uF Electrolytic | `CAP-SMD_BD6.3-L6.6-W6.6-FD` | 1 | `RVT1V101M0607` | `C18221518` | Bulk Cap |
-| **C12, C13** | 220uF Electrolytic | `CAP-SMD_BD6.3-L6.6-W6.6-LS7.4-FD` | 2 | `RVT1E221M0607` | `C2918361` | SEPIC Input/Output |
-| **C11** | 10uF Ceramic | `C1206` | 1 | `CL31A106KBHNNNE` | `C13585` | SEPIC Coupling |
-| **C1, C3, C5** | 22uF Ceramic | `C0805` | 3 | `CL21A226MAQNNNE` | `C45783` | Decoupling |
-| **C6** | 4.7uF Ceramic | `C0603` | 1 | `CL10A475KO8NNNC` | `C19666` | Decoupling |
-| **C7, C8, C9** | 100nF Ceramic | `C0805` | 3 | `CC0805KRX7R9BB104` | `C49678` | Filter Cap |
-| **C2, C4** | 100nF Ceramic | `C0603` | 2 | `CC0603KRX7R9BB104` | `C14663` | Filter Cap |
-| **R1** | 10kΩ | `R0603` | 1 | `0603WAF1002T5E` | `C25804` | EN Pull-up |
-| **R2** | 2kΩ | `R0603` | 1 | `0603WAF2001T5E` | `C22975` | LED Limiter |
-| **R10** | 2kΩ | `R0805` | 1 | `0805W8F2001T5E` | `C17604` | Logic Divider |
-| **R11** | 2kΩ | `R0603` | 1 | `0603WAF2001T5E` | `C22975` | FB Lower Resistor |
-| **R13** | 18kΩ | `R0603` | 1 | `0603WAF1802T5E` | `C25810` | Divider Resistor |
-| **R3, R4** | 0Ω | `R0805` | 2 | `0805W8F0000T5E` | `C17477` | Jumper Resistors |
-| **R5, R6, R9** | 10kΩ | `R0805` | 3 | `0805W8F1002T5E` | `C17414` | Pull-ups |
-| **R7** | 20.5kΩ | `R0805` | 1 | `0805W8F2052T5E` | `C17537` | Divider Resistor |
-| **R8** | 47kΩ | `R0805` | 1 | `0805W8F4702T5E` | `C17713` | Divider Resistor |
-| **USB1** | Micro-USB Connector | `MICRO-USB-SMD_U254-051T-4BH83-S1S` | 1 | `U254-051T-4BH83-S1S` | `C319160` | Programming Port |
-| **SW1, SW2** | SMD Tact Switch | `SW-SMD_HX-3X6X2.5-X` | 2 | `HX-3x6x2.5-X SMD tact Switch` | `C49234125` | Reset / Boot |
-| **MOTOR_A, MOTOR_B, BATTERY_INPUT** | HDR-F-2.54 1x2 | `HDR-F-2.54_1X2` | 3 | - | `C49661` | Power & Motors |
-| **SENSOR, H10, SERVO_A, SERVO_B** | HDR-F-2.54 1x3 | `HDR-F-2.54_1X3` | 4 | - | `C146690` | Sensors & Servos |
-| **H13, DISPLAY&I2C, ULTRA, H15** | HDR-F-2.54 1x4 | `HDR-F-2.54_1X4` | 4 | - | `C225501` | Displays & Sonar |
-| **H7, POWER, GPIO** | HDR-F-2.54 1x5 | `HDR-F-2.54_1X5` | 3 | - | `C50950` | Power & Expansion |
-
----
-
+![Bill of Materials](docs/images/bom_corrected_table.png)
 
 
 
